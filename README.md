@@ -1,6 +1,6 @@
 # Java DSA Learning Repository
 
-A collection of Java programs designed to help learn the fundamentals of Data Structures and Algorithms (DSA) with a focus on core Java concepts.
+Personal Java learning repository - practice programs for learning Data Structures and Algorithms (DSA) and core Java concepts.
 
 ## 📚 Contents
 
@@ -92,9 +92,9 @@ After mastering these fundamentals, you can move to:
 
 ## 📝 Notes
 
-- These programs are designed for educational purposes
+- Personal practice programs for Java learning
 - Each file focuses on specific Java concepts
-- Comments are included in source code for clarity
+- Includes comments in source code for reference
 - Output includes descriptive labels for easy understanding
 
 ---
