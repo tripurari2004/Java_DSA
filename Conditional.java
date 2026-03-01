@@ -38,6 +38,41 @@ public class Conditional {
         }
         System.out.println("The largest number is: " + max);
 
+
+        //Nested If Statements
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " is a leap year.");
+                } else {
+                    System.out.println(year + " is not a leap year.");
+                }
+            } else {
+                System.out.println(year + " is a leap year.");
+            }
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+
+        //Logical Operators in Conditional Statements
+        System.out.print("Enter a number: ");
+        int number1 = scanner.nextInt();
+        if (number1 > 0 && number1 % 2 == 0) {
+            System.out.println("The number is positive and even.");
+        } else if (number1 > 0 && number1 % 2 != 0) {
+            System.out.println("The number is positive and odd.");
+        } else if (number1 < 0 && number1 % 2 == 0) {
+            System.out.println("The number is negative and even.");
+        } else if (number1 < 0 && number1 % 2 != 0) {
+            System.out.println("The number is negative and odd.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+
         //Ternary Operator
         System.out.print("Enter a number: ");
         int number2 = scanner.nextInt();
