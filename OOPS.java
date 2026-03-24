@@ -21,12 +21,21 @@ public class OOPS {
         System.out.println(s3.age);
 
         Student s4 = new Student("Kumar", 16);
+        s4.marks[0] = 98;
+        s4.marks[1] = 95;
+        s4.marks[2] = 85;
         System.out.println(s4.name);
         System.out.println(s4.age);
 
         Student s5 = new Student(s4);
         System.out.println(s5.name);
         System.out.println(s5.age);
+
+        s4.marks[2] = 100;
+
+        for (int i = 0; i < s5.marks.length; i++) {
+            System.out.println(s5.marks[i]);
+        }
     }
 }
 
@@ -63,6 +72,7 @@ class Student {
     String name;
     int age;
     float percentage;
+    int marks[];
 
     // constructor overloading
     Student(){
@@ -80,15 +90,26 @@ class Student {
     Student(String name, int age){
         this.name = name;
         this.age = age;
+        this.marks = new int[3];
     }
 
     //copy constructor
+    
+    //shallow copy
+    // Student (Student s){
+    //     marks = new int[3];
+    //     this.name = s.name;
+    //     this.age = s.age;
+    //     this.marks = s.marks;
+    // }
+
+    //deep copy
     Student (Student s){
+        marks = new int[3];
         this.name = s.name;
         this.age = s.age;
-    }
-
-    void calcPercentage(int phy, int chem, int maths){
-        percentage = (phy+chem+maths)/3;
+        for (int i = 0; i < s.marks.length; i++) {
+            this.marks[i] = s.marks[i];
+        }
     }
 }
